@@ -1,0 +1,26 @@
+/* 
+  • less中 支持 两种注释  多行  单行
+  • wxss 不能写 单行注释 因为 写了 和没写是一样！！！
+*/
+/* --------------- 一、样式-原生的微信小程序不支持使用less ---------------
+* @Remark：  在文件_05wxssStyle.less中输入的代码，会同时在文件_05wxssStyle.wxss中生成
+*/
+/* 1、 定义less变量 */
+@color:green;
+text{
+  /* 2、 使用变量 */
+  color:@color;
+}
+/* 3、多级选择器 */
+view{
+  .vie1{
+    text{
+      color: red;
+    }
+  }
+}
+/* 4、导入common.less */
+@import "../../static/document/less/common.less";
+view{
+  color: @themeColor;
+}

@@ -1,0 +1,27 @@
+<!--pages/_04eventBind/_04eventBind.wxml-->
+ <view class="noteCla2">一、事件绑定</view>
+ <text class="noteCla4" decode='true'>
+1、 input标签绑定input事件的属性
+  bindinput=""
+2、 handleInputFun
+  通过事件源对象，获取输入框的值 e.detail.value 
+3、 把输入框的值 赋值到 data当中
+  不能直接 
+  I、 this.data.num=e.detail.value 
+  II、 this.num=e.detail.value 
+  正确的写法
+    this.setData({
+      num:e.detail.value 
+    })
+4、 需要加入一个点击事件 
+  I、 button标签绑定点击事件的属性bindtap=""
+  II、 无法在小程序当中的 事件中 直接传参 
+  III、 通过自定义属性的方式来传递参数
+  IV、 事件源中获取 自定义属性
+</text>
+<input type="text" bindinput="handleInputFun" />
+<button bindtap="handletap" data-operation="{{1}}" >+</button>
+<button bindtap="handletap" data-operation="{{-1}}">-</button>
+<view>  
+  {{num}}
+</view>

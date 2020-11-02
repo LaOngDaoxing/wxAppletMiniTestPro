@@ -1,0 +1,26 @@
+/* pages/_06commonElement/_06commonElement.wxss */
+/* --------------- 二、常用标签——图片标签image ---------------*/
+.imgCls1{
+  box-sizing: border-box;
+  border: 1px solid red;
+  width: 300px;
+  height: 200px;
+}
+/* --------------- 三、常用标签——轮播图外层容器标签swiper ---------------*/
+/**
+4、 根据原图的宽度和高度， 等比例获得swiper的宽度width和高度height
+  原图的宽度和高度  1125 * 352 px
+  swiper宽度 / swiper高度 =  原图的宽度  /  原图的高度
+  swiper高度  =  swiper宽度 *  原图的高度 / 原图的宽度
+    height: calc(100% * 352 /  1125)
+    height: calc(750rpx * 352 /  1125)
+    height: calc(100vw * 352 /  1125)
+*/
+swiper {
+  width: 100%;
+  /* height: calc(100vw * 352 /  1125); */
+  height: 31.28vw;
+}
+.imgCls2 {
+  width: 100%;
+}

@@ -1,0 +1,138 @@
+<text class="noteCla1" decode='true'>
+  • text 相当于以前web中的 span标签 行内元素  不会换行
+  • view 相当于以前web中的 div标签 块级元素  会换行
+  • checkbox 以前的复选框标签
+</text>
+<view class="noteCla2">一、数据绑定</view>
+<text class="noteCla3" decode='true'>1、 字符串</text>
+<view> {{msg}} </view>
+<text class="noteCla3">2、 数字类型</text>
+<view>{{num}}</view>
+<text class="noteCla3">3、 bool类型</text>
+<view> 是否是伪娘: {{isGirl}} </view>
+<text class="noteCla3">4、 object类型</text>
+<view>{{person.age}}</view>
+<view>{{person.height}}</view>
+<view>{{person.weight}}</view>
+<view>{{person.name}}</view>
+<text class="noteCla3">5、 在标签的属性中使用</text>
+<view data-num="{{num}}"> 自定义属性</view>
+<text class='noteCla3' decode='true'>6、 复选框</text>
+<text class='noteCla4' decode='true' user-select="true">\n当使用bool类型充当checked属性值时，字符串和花括号之间一定不要存在空格 否则会导致识别失败。右侧写法就是错误的示范&lt;checkbox
+  checked=" {{isChecked}}"> &lt;/checkbox></text>
+<view>
+  <checkbox checked="{{isChecked}}"> </checkbox>
+</view>
+
+<text class='noteCla3' decode='true'>7、 运算 => 表达式</text>
+<text class='noteCla4' decode='true' user-select="true">
+I、   可以在花括号中 加入 表达式 --  “语句”
+II、 表达式
+  指的是一些简单 运算 数字运算 字符串 拼接  逻辑运算。。
+  &nbsp;① 数字的加减
+  &nbsp;② 字符串拼接
+  &nbsp;③ 三元表达式 
+III、 语句
+  复杂的代码段
+        if else
+        switch
+        do while 。。。。
+        for 。。。
+</text>
+<view>{{1+1}}</view>
+<view>{{'1'+'1'}}</view>
+<view>{{ 11%2===0 ? '偶数' : '奇数' }}</view>
+<view class="noteCla2">二、列表渲染</view>
+<text class="noteCla3" decode='true'>8、 列表循环</text>
+<text class="noteCla4" decode='true' user-select="true">    
+I、 wx:for="{&nbsp;{数组或者对象}}"  wx:for-item="循环项的名称"  wx:for-index="循环项的索引"
+II、 wx:key="唯一的值" 用来提高列表渲染的性能
+&nbsp;① wx:key 绑定一个普通的字符串的时候 那么这个字符串名称 肯定是 循环数组 中的 对象的 唯一属性
+&nbsp;② wx:key ="*this"  就表示 你的数组 是一个普通的数组  *this 表示是 循环项 
+        [1,2,3,44,5]
+        ["1","222","adfdf"]
+III、 当出现 数组的嵌套循环的时候 尤其要注意  以下绑定的名称 不要重名
+        wx:for-item="item" wx:for-index="index"
+IV、 默认情况下 我们 不写
+       wx:for-item="item" wx:for-index="index"
+       小程序也会把 循环项的名称 和 索引的名称 item 和 index 
+       只有一层循环的话 （wx:for-item="item" wx:for-index="index"） 可以省略</text>
+<view>
+<view wx:for="{{array}}"> {{item}} </view>
+<view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+    索引：{{index}}
+    --
+    值:{{item.name}}
+</view>
+</view>
+<text class="noteCla3" decode='true'>9、 对象循环</text>
+<text class="noteCla4" decode='true' user-select="true">
+  I、 wx:for="{&nbsp;{对象}}" wx:for-item="对象的值"  wx:for-index="对象的属性"
+  II、 循环对象的时候 最好把 item和index的名称都修改一下
+      wx:for-item="value"  wx:for-index="key"
+</text>
+<view>
+  <view>对象循环</view>
+  <view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+    属性:{{key}}
+    --
+    值:{{value}}
+  </view>
+</view>
+<text class="noteCla3" decode='true'>10、 block</text>
+<text class="noteCla4" decode='true' user-select="true">  
+  I、 block相当于占位符的标签 
+  II、 写代码的时候 可以看到这标签存在
+  III、 页面渲染 小程序会把它移除掉
+</text>
+<view>
+  <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id" class="my_list">
+    索引：{{index}}
+    --
+    值:{{item.name}}
+  </view>
+  <view>--------------</view>
+  <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id" class="my_list">
+    索引：{{index}}
+    --
+    值:{{item.name}}
+  </block>
+</view>
+<view class="noteCla2">三、条件渲染</view>
+<text class="noteCla3" decode='true'>11、 条件渲染</text>
+<text class="noteCla4" decode='true' user-select="true">
+  I、 wx:if="{{true/false}}"
+    if , else , if else
+      wx:if
+      wx:elif
+      wx:else 
+  II、 hidden 
+    &nbsp;① 在标签上直接加入属性 hidden 
+    &nbsp;② hidden="{{true}}"
+  III、 什么场景下用哪个
+    &nbsp;① 当标签不是频繁的切换显示 优先使用 wx:if
+          直接把标签从 页面结构给移除掉 
+    &nbsp;② 当标签频繁的切换显示的时候 优先使用 hidden
+          通过添加样式的方式来切换显示 
+          hidden 属性 不要和 样式 display一起使用
+</text>
+<view>
+  <view>-------if else-------</view>
+  <view wx:if="{{true}}">显示</view>
+  <view wx:if="{{false}}">隐藏</view>
+
+  <view wx:if="{{flase}}">1</view>
+  <view wx:elif="{{flase}}">2 </view>
+  <view wx:else> 3 </view>
+
+  <view wx:if="{{msg == 'WEBVIEW'}}">1</view>
+  <view wx:elif="{{msg == 'hello mina'}}">2 </view>
+  <view wx:else> 3 </view>
+  <view>--------------</view>
+  <view hidden>hidden1</view>
+  <view hidden="{{false}}">hidden2</view>
+
+  <view>-------000-------</view>
+  <view wx:if="{{false}}">wx:if</view>
+  <view hidden style="display: flex;">hidden</view>
+</view>

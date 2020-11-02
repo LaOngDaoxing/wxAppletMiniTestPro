@@ -1,0 +1,56 @@
+/* pages/_05wxssStyle/_05wxssStyle.wxss */
+/* --------------- 一、样式-rpx ---------------*/
+/* 
+1、 小程序中 不需要主动来引入样式文件 
+2、 尺度单位1px   => 1rpx
+  I、 设计稿 750px
+    750px   => 750rpx
+  II、 把屏幕宽度 750px改成 375px
+    375px = 750rpx
+    1px   = 2rpx
+    1rpx  = 0.5px
+3、 存在一个设计稿 宽度 414 或者 未知 page 
+  I、 设计稿 pageNum 存在一个元素 宽度 100px
+  II、 拿以上的需求 去实现 不同宽度的页面适配 
+    pageNum px = 750rpx
+    1px = 750rpx / page
+    100px = 750rpx * 100 / pageNum 
+    假设  pageNum =  375px
+4、 利用css 和 wxss 都支持的calc属性
+  I、 750 和 rpx 中间不要留空格
+  II、 运算符的两边也不要留空格
+ */
+view{
+  background-color: aqua;
+  color: white;
+  font-size: 40rpx;
+  height: 200rpx;
+  /* width: 200rpx; */
+  width:calc(750rpx * 100 / 375);
+/* 以下代码写法是错误  */
+/* width:750rpx * 100 / 375 ;  */
+}
+
+/* --------------- 二、样式-导入common.wxss ---------------*/
+/* 
+1、 引入的 代码 是通过 @import 来引入common.wxss
+2、 路径 只能写相对路径
+ */
+ @import "../../static/document/wxss/common/common.wxss";
+
+/* --------------- 三、样式-选择器不支持通配符，原生的微信小程序不支持使用less ---------------
+* @Remark：  在文件_05wxssStyle.less中输入的代码，会同时在文件_05wxssStyle.wxss中生成
+*/
+/* 1、 定义less变量 */
+text {
+  /* 2、 使用变量 */
+  color: white;
+}
+/* 3、多级选择器 */
+view .vie1 text {
+  color: red;
+}
+/* 4、导入 */
+view {
+  color: green;
+}
