@@ -24,8 +24,8 @@
     &lt;NavTabsB tabsArr3="data属性下变量" bind父组件自定义事件的名称="回调函数" &lt;/NavTabsB>
 </text>
 <view class="noteCla5">（6）子向父传递数据-标题激活选中事件</view>
-<NavTabsB tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
-</NavTabsB>
+<NavTabsC tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
+</NavTabsC>
 <view class="noteCla3">三、自定义组件-slot</view>
 <text class="noteCla4" decode='true' user-select="true">  
   slot 标签 其实就是一个占位符 插槽
