@@ -1,9 +1,10 @@
-<!--components/TabsB/TabsB.wxml-->
-<view class="noteCla5">（4）动态自定义组件-父向子传递数据</view>
-<!-- <view>{{cusPropertyName001}}</view> -->
-
+<!--（4）父页面自定义标签属性值-父向子传递数据-->
+<view>{{cusPropertyName001}}</view>
+<!--（5）父页面自定义data属性值-父向子传递数据-->
 <view class="tabs_title">
   <view wx:for="{{tabsArr3}}" wx:key="id" class="title_item {{item.isActive?'active':''}}" >
     {{item.name}}
   </view>
 </view>
+
+

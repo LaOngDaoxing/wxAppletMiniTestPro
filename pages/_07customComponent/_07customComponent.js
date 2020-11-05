@@ -1,6 +1,5 @@
 // pages/_07customComponent/_07customComponent.js
 Page({
-
   /**
    * 页面的初始数据
    */

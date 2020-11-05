@@ -15,5 +15,7 @@
   2 子向父传递数据 通过事件的方式传递
     1 在子组件的标签上加入一个 自定义事件
 </text>
-<!-- <NavTabsB cusPropertyName001="123"></NavTabsB> -->
+<view class="noteCla5">（4）父页面自定义标签属性值-父向子传递数据</view>
+<NavTabsB cusPropertyName001="123"></NavTabsB>
+<view class="noteCla5">（5）父页面自定义data属性值-父向子传递数据</view>
 <NavTabsB tabsArr3="{{tabsArr3}}"></NavTabsB>
