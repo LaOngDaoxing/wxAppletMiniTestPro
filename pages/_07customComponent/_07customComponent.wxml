@@ -1,10 +1,10 @@
 <!--pages/_07customComponent/_07customComponent.wxml-->
 <view class="noteCla3">一、自定义组件—新建自定义组件Tabs</view>
 <text class="noteCla4" decode='true' user-select="true">  
-  1、 直接手动新建文件夹wxAppletMiniTestPro/components/TabsA
-  2、 桌面 微信Applet开发者工具》在新建的文件夹TabsA 右键》点击 新建Component》输入TabsA》
-  3、 在文件_07customComponent.json中声明组件"TabsA":"../../components/TabsA/TabsA"
-  4、 在页面中将自定义组件，看成普通标签使用&lt;TabsA>&lt;/TabsA>
+  1、 直接手动新建文件夹wxAppletMiniTestPro/components/NavTabsA
+  2、 桌面 微信Applet开发者工具》在新建的文件夹NavTabsA 右键》点击 新建Component》输入NavTabsA》
+  3、 在文件_07customComponent.json中声明组件"NavTabsA":"../../components/NavTabsA/NavTabsA"
+  4、 在页面中将自定义组件，看成普通标签使用&lt;NavTabsA>&lt;/NavTabsA>
 </text>
 <NavTabsA></NavTabsA>
 <view class="noteCla3">二、动态自定义组件-父向子传递数据</view>
@@ -12,10 +12,29 @@
   1 父组件(页面) 向子组件 传递数据 通过 标签属性的方式来传递
     1 在子组件上进行接收
     2 把这个数据当成是data中的数据直接用即可
-  2 子向父传递数据 通过事件的方式传递
-    1 在子组件的标签上加入一个 自定义事件
 </text>
 <view class="noteCla5">（4）父页面自定义标签属性值-父向子传递数据</view>
 <NavTabsB cusPropertyName001="123"></NavTabsB>
 <view class="noteCla5">（5）父页面自定义data属性值-父向子传递数据</view>
 <NavTabsB tabsArr3="{{tabsArr3}}"></NavTabsB>
+<view class="noteCla3">三、动态自定义组件-子向父传递数据</view>
+<text class="noteCla4" decode='true' user-select="true">  
+  1 子向父传递数据 通过事件的方式传递
+    1 在子组件的标签上加入一个 自定义事件
+    &lt;NavTabsB tabsArr3="data属性下变量" bind父组件自定义事件的名称="回调函数" &lt;/NavTabsB>
+</text>
+<view class="noteCla5">（6）子向父传递数据-标题激活选中事件</view>
+<NavTabsB tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
+</NavTabsB>
+<view class="noteCla3">三、自定义组件-slot</view>
+<text class="noteCla4" decode='true' user-select="true">  
+  slot 标签 其实就是一个占位符 插槽
+  等到 父组件调用 子组件的时候 再传递 标签过来 最终 这些被传递的标签
+      就会替换 slot 插槽的位置
+</text>
+<!-- <NavTabsC tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
+  <block wx:if="{{tabsArr3[0].isActive}}">0 </block>
+  <block wx:elif="{{tabsArr3[1].isActive}}">1 </block>
+  <block wx:elif="{{tabsArr3[2].isActive}}">2 </block>
+  <block wx:else>3</block>
+</NavTabsC> -->

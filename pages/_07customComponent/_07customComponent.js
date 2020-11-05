@@ -27,8 +27,12 @@ Page({
       }
     ]
   },
-  // 自定义事件 用来接收子组件传递的数据的
-  handleItemChange(e) {
+  /* 
+  * @Description：自定义事件 用来接收子组件传递的数据的
+  * 1、组件.js 文件中 存放事件回调函数的时候 必须要存在在 methods中！！！
+  * 2、页面.js 文件中 存放事件回调函数的时候 存放在data同层级下！！！
+  */
+ receiveSonComponentData(e) {
     // 接收传递过来的参数
     const { index } = e.detail;
     let { tabsArr3 } = this.data;
