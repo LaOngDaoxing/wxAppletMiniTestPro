@@ -63,16 +63,16 @@
     self 默认值 自己 小程序的页面 
     miniProgram 其他的小程序的页面
 4、 open-type 跳转的方式
-    navigate 默认值 	保留当前页面，跳转到应用内的某个页面，但是不能跳到 tabbar 页面
-    redirect	关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabbar 页面
-    switchTab	跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+    navigate  默认值 	保留当前页面，跳转到应用内的某个页面，但是不能跳转到 tabBar页面
+    redirect	关闭当前页面，跳转到应用内的某个页面，但是不能跳转到 tabBar页面
+    switchTab	跳转到 tabBar页面，并关闭其他所有非 tabBar页面
     reLaunch	关闭所有页面，打开到应用内的某个页面
 </text>
- <navigator url="/pages/_03wxmlGrammer/_03wxmlGrammer"> WXML语法参考页面 </navigator>
- <navigator url="/pages/index/index"> 直接跳转到 tabbar页面 </navigator>
- <navigator open-type="redirect" url="/pages/_03wxmlGrammer/_03wxmlGrammer">  WXML语法参考页面 redirect </navigator>
- <navigator open-type="switchTab" url="/pages/index/index">  switchTab直接跳转到 tabbar页面 </navigator>
- <navigator open-type="reLaunch" url="/pages/index/index">  reLaunch 可以随便跳 </navigator> 
+ <navigator url="/pages/_03wxmlGrammer/_03wxmlGrammer">不能跳转到 tabBar页面</navigator>
+ <navigator url="/pages/index/index">不能跳转到 tabBar页面</navigator>
+ <navigator open-type="redirect" url="/pages/index/index">不能跳转到 tabBar页面</navigator>
+ <navigator open-type="switchTab" url="/pages/_03wxmlGrammer/_03wxmlGrammer">跳转到 tabBar页面</navigator>
+ <navigator open-type="reLaunch" url="/pages/_03wxmlGrammer/_03wxmlGrammer">可以随便跳转</navigator> 
  
  <view class="noteCla3">五、常用标签——富文本标签rich-text</view>
  <text class="noteCla4" decode='true' user-select="true">

@@ -1,4 +1,20 @@
 <!--pages/catalogPage/catalogPage.wxml-->
-<navigator url="../_03wxmlGrammer/_03wxmlGrammer">跳转到新页面</navigator>
-<navigator url="../_04eventBind/_04eventBind.wxml" open-type="redirect">在当前页打开</navigator>
-<navigator url="../index/index" open-type="switchTab">切换到首页Tab</navigator>
+<navigator url="/pages/index/index">首页</navigator>
+<navigator open-type="switchTab" url="/pages/_03wxmlGrammer/_03wxmlGrammer">_03WXML语法参考页面</navigator>
+<navigator open-type="reLaunch" url="/pages/_04eventBind/_04eventBind">_04事件绑定页面</navigator>
+<navigator url="/pages/_05wxssStyle/_05wxssStyle">_05wxss样式</navigator>
+<navigator open-type="switchTab" url="/pages/_06commonElement/_06commonElement">_06常用标签页面</navigator>
+<navigator  url="/pages/_07customComponent/_07customComponent">_07自定义组件</navigator>
+<view class="noteCla3">四、常用标签——导航标签navigator</view>
+<text class="noteCla4" decode='true' user-select="true">
+1、 块级元素 默认会换行  可以直接加宽度和高度 
+2、 url 要跳转的页面路径  绝对路径 相对路径
+3、 target 要跳转到当前的小程序 还是其他的小程序的页面
+    self 默认值 自己 小程序的页面 
+    miniProgram 其他的小程序的页面
+4、 open-type 跳转的方式
+    navigate  默认值 	保留当前页面，跳转到应用内的某个页面，但是不能跳到 tabBar页面
+    redirect	关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabBar页面
+    switchTab	跳转到 tabBar页面，并关闭其他所有非 tabBar页面
+    reLaunch	关闭所有页面，打开到应用内的某个页面
+</text>
