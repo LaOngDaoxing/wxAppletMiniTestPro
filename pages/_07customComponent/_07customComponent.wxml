@@ -29,12 +29,11 @@
 <view class="noteCla3">三、自定义组件-slot</view>
 <text class="noteCla4" decode='true' user-select="true">  
   slot 标签 其实就是一个占位符 插槽
-  等到 父组件调用 子组件的时候 再传递 标签过来 最终 这些被传递的标签
-      就会替换 slot 插槽的位置
+  等到父组件调用子组件的时候：父组件传递标签到子组件，最终 这些被传递的标签就会替换子组件中 slot插槽的位置。
 </text>
-<!-- <NavTabsC tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
+<NavTabsC tabsArr3="{{tabsArr3}}" bindfatherComponentCusEventName="receiveSonComponentData" >
   <block wx:if="{{tabsArr3[0].isActive}}">0 </block>
   <block wx:elif="{{tabsArr3[1].isActive}}">1 </block>
   <block wx:elif="{{tabsArr3[2].isActive}}">2 </block>
   <block wx:else>3</block>
-</NavTabsC> -->
+</NavTabsC>

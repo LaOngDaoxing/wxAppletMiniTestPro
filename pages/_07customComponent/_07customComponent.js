@@ -33,7 +33,7 @@ Page({
   * 2、页面.js 文件中 存放事件回调函数的时候 存放在data同层级下！！！
   */
  receiveSonComponentData(e) {
-    // 接收传递过来的参数
+    // 接收子组件传递过来的参数
     const { index } = e.detail;
     let { tabsArr3 } = this.data;
     tabsArr3.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false);
