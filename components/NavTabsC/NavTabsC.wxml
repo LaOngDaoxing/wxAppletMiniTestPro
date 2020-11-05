@@ -1,14 +1,16 @@
 <!--components/NavTabsC/NavTabsC.wxml-->
 <!--（5）父页面自定义data属性值-父向子传递数据-->
-<view class="tabs_title">
-  <view wx:for="{{tabsArr3}}" wx:key="id" class="title_item {{item.isActive?'active':''}}" bindtap="changeTabEventFunC" data-index="{{index}}">
-    {{item.name}}
+<view class="tabs">
+  <view class="tabs_title">
+    <view wx:for="{{tabsArr3}}" wx:key="id" class="title_item {{item.isActive?'active':''}}" bindtap="changeTabEventFunC" data-index="{{index}}">
+      {{item.name}}
+    </view>
   </view>
   <view class="tabs_content">
-    <!--
-      slot 标签 其实就是一个占位符 插槽
-      等到父组件调用子组件的时候：父组件传递标签到子组件，最终 这些被传递的标签就会替换子组件中 slot插槽的位置。
-    -->
-    <slot></slot>
+      <!--
+        slot 标签 其实就是一个占位符 插槽
+        等到父组件调用子组件的时候：父组件传递标签到子组件，最终 这些被传递的标签就会替换子组件中 slot插槽的位置。
+      -->
+      <slot></slot>
   </view>
 </view>
