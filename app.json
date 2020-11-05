@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/_07customComponent/_07customComponent",
     "pages/_06commonElement/_06commonElement",
     "pages/_05wxssStyle/_05wxssStyle",
     "pages/_04eventBind/_04eventBind",

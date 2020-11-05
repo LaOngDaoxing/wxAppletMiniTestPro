@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "NavTabsA":"../../components/NavTabsA/NavTabsA",
+    "NavTabsB":"../../components/NavTabsB/NavTabsB"
+  }
+}

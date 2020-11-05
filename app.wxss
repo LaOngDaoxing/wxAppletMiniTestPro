@@ -38,6 +38,11 @@ III、
   margin-left: 12px;
   color: gainsboro;
 }
+.noteCla5{
+  margin-left: 8px;
+  color: blueviolet;
+  font-size: 14px;
+}
 /* --------------- 3种水平线样式 ---------------*/
 /*内嵌水平线*/
 .hr.style-one { 
