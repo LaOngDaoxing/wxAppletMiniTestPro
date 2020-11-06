@@ -62,7 +62,7 @@ Component({
    */
   methods: {
     /* 
-    * @Description：获得并处理子组件属性data中的数据，然后将处理结果数据赋值给了子组件属性data: {tabsArr3:tabsArr3Var}，即子未向父传递数据
+    * @Description：获得并处理子组件data中的数据，然后将处理结果数据赋值给了子组件data: {tabsArr3:tabsArr3Var}，即子未向父传递数据
     * @Remark：
         1 绑定点击事件  需要在methods中绑定
         （1）组件.js 文件中 存放事件回调函数的时候 必须要存在在 methods中！！！

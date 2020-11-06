@@ -3,8 +3,8 @@ Component({
   /**
    * 组件的属性列表：组件的对外属性，是属性名到属性设置的映射表
    * @Remark
-      父向子的属性properties传递数据
-      》在子组件methods中的自定义事件方法（获得并处理子组件属性properties中的数据 ——> 子向父传递数据）
+      父向子的properties传递数据
+      》在子组件methods中的自定义事件方法（获得并处理子组件properties中的数据 ——> 子向父传递数据）
       》在父组件methods中的自定义事件方法（获得并处理子组件传递来的数据）。
    */
   properties: {
@@ -39,8 +39,8 @@ Component({
         （1）组件.js 文件中 存放事件回调函数的时候 必须要存在在 methods中！！！
         （2）页面.js 文件中 存放事件回调函数的时候 存放在data同层级下！！！
     * @Bug：
-        正确的逻辑是：父向子的属性properties传递数据》在子组件属性methods中的自定义事件方法（获得并处理子组件属性properties中的数据 ——> 子向父传递数据）》在父组件属性methods中的自定义事件方法（获得并处理子组件传递来的数据）。
-        但现在错误情况是：父向子的属性properties传递数据》在子组件属性methods中的自定义事件方法（获得并处理子组件属性properties中的数据，然后将处理结果数据赋值给了子组件属性data: {tabsArr3:tabsArr3Var}，即子未向父传递数据）》在父组件属性methods中的自定义事件方法（获得并处理子组件传递来的数据）。
+        正确的逻辑是：父向子的properties传递数据》在子组件methods中的自定义事件方法（获得并处理子组件properties中的数据 ——> 子向父传递数据）》在父组件methods中的自定义事件方法（获得并处理子组件传递来的数据）。
+        但现在错误情况是：父向子的properties传递数据》在子组件methods中的自定义事件方法（获得并处理子组件properties中的数据，然后将处理结果数据赋值给了子组件data: {tabsArr3:tabsArr3Var}，即子未向父传递数据）》在父组件methods中的自定义事件方法（获得并处理子组件传递来的数据）。
     */
     changeTabEventFunA(e){
       /* 
