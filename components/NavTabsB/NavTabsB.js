@@ -33,7 +33,7 @@ Component({
    */
   methods: {
     /* 
-    * @Description：动态自定义组件-标题激活选中事件
+    * @Description：获得并处理父组件传递来的数据，然后将处理结果数据赋值给了子组件data: {tabsArr3:tabsArr3Var}，即子未向父传递数据
     * @Remark：
         1 绑定点击事件  需要在methods中绑定
         （1）组件.js 文件中 存放事件回调函数的时候 必须要存在在 methods中！！！
@@ -59,7 +59,7 @@ Component({
       const {index}=e.currentTarget.dataset;
       // 3 获取子组件properties中的原数组tabsArr3 
       let tabsArr3Var=JSON.parse(JSON.stringify(this.data.tabsArr3));
-      // 4 循环原数组
+      // 4 循环原数组 》动态自定义组件-设置标题激活选中效果
       tabsArr3Var.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
       // 将tabsArr3Var值，赋值给子组件data: {tabsArr3:tabsArr3Var}；相当于子组件data中存在2个tabsArr3。正确应该将tabsArr3Var赋值给父组件data中，再在父组件中处理tabsArr3。
       this.setData({

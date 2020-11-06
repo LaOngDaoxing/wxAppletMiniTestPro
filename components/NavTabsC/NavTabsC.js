@@ -22,7 +22,7 @@ Component({
    */
   methods: {
     /* 
-    * @Description：（6）子向父传递数据
+    * @Description：（6）获得并处理父组件传递来的数据 ——> 子向父传递数据
     * @Remark：
         1 绑定点击事件  需要在methods中绑定
         （1）组件.js 文件中 存放事件回调函数的时候 必须要存在在 methods中！！！
