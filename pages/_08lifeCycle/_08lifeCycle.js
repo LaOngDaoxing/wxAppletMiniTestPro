@@ -55,12 +55,10 @@ Page({
   },
 
   /**
-   * 页面上拉触底事件的处理函数
-   * 需要让页面 出现上下滚动才行 
+   * 页面上拉/上下滚动，直到上拉触底事件的处理函数（此方法用于加载下一页数据）
    */
   onReachBottom: function () {
     console.log("页面生命周期onReachBottom");
-    // 上拉加载下一页数据 
   },
 
   /**
@@ -76,8 +74,18 @@ Page({
     console.log("页面生命周期onPageScroll");
   },
   /**
-   * 页面的尺寸发生改变的时候 触发
-   * 小程序 发生了 横屏竖屏 切换的时候触发 
+   * 页面的尺寸发生改变时触发（例如：小程序 发生了 横屏竖屏 切换的时候触发）
+   * @CodeGrammer
+      在手机上启用屏幕旋转支持
+        （1）全局生效，在app.json中添加
+            {
+              "pageOrientation":"auto"
+            }    
+        （2）当前页面_08lifeCycle.wxml生效，在_08lifeCycle.json中添加
+            {
+              "pageOrientation":"auto"
+            }
+      然后模拟器界面右上角，会多出一个“旋转”按钮
    */
   onResize(){
     console.log("页面生命周期onResize");
