@@ -28,16 +28,16 @@
         "selectedIconPath": "static/document/images/icon/home.png"
       },
       {
-        "pagePath": "pages/_04eventBind/_04eventBind",
-        "text": "eventBind",
-        "iconPath": "static/document/images/icon/_my.png",
-        "selectedIconPath": "static/document/images/icon/my.png"
-      },
-      {
         "pagePath": "pages/_03wxmlGrammer/_03wxmlGrammer",
         "text": "wxml语法",
         "iconPath": "static/document/images/icon/_search.png",
         "selectedIconPath": "static/document/images/icon/search.png"
+      },
+      {
+        "pagePath": "pages/_04eventBind/_04eventBind",
+        "text": "eventBind",
+        "iconPath": "static/document/images/icon/_my.png",
+        "selectedIconPath": "static/document/images/icon/my.png"
       },
       {
         "pagePath": "pages/_06commonElement/_06commonElement",

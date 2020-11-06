@@ -1,5 +1,7 @@
 //app.js
 App({
+  /*------------------------------- 一、应用生命周期 -------------------------------*/
+  //  1、 应用第一次启动的就会触发的事件  
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -32,6 +34,30 @@ App({
         }
       }
     })
+  },
+  // 2、 应用 被用户看到 
+  onShow(){
+    // 对应用的数据或者页面效果 重置 
+    // console.log("onShow");
+  },
+  // 3、 应用 被隐藏了 
+  onHide(){
+    // 暂停或者清除定时器 
+    // console.log("Hide");
+  },
+  // 4、 应用的代码发生了报错的时候 就会触发
+  onError(err){
+    // 在应用发生代码报错的时候，收集用户的错误信息，通过异步请求 将错误的信息发送后台去
+    // console.log("onError");
+    // console.log(err);
+  },
+  // 5、 应用第一次启动的时候，如果找不到应用第一个入口页面（文件app.json中"pages":[第一行路径即应用第一个入口页面]），就会触发事件onPageNotFound()。
+  onPageNotFound(){
+    // 如果应用第一个入口页面不存在，可通过wx.navigateTo来重新跳转到第二个首页；注意，不能跳到tabbar页面、导航组件类似。
+    wx.navigateTo({
+      url: '/pages/_05wxssStyle/_05wxssStyle' 
+    });  
+    // console.log("onPageNotFound");
   },
   globalData: {
     userInfo: null
