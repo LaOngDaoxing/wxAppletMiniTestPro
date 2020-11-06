@@ -9,7 +9,8 @@
     "pages/_04eventBind/_04eventBind",
     "pages/_05wxssStyle/_05wxssStyle",
     "pages/_06commonElement/_06commonElement",
-    "pages/_07customComponent/_07customComponent"
+    "pages/_07customComponent/_07customComponent",
+    "pages/_08lifeCycle/_08lifeCycle"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -5,6 +5,7 @@
 <navigator url="/pages/_05wxssStyle/_05wxssStyle">_05wxss样式</navigator>
 <navigator open-type="switchTab" url="/pages/_06commonElement/_06commonElement">_06常用标签页面</navigator>
 <navigator url="/pages/_07customComponent/_07customComponent">_07自定义组件</navigator>
+<navigator url="/pages/_08lifeCycle/_08lifeCycle">_08生命周期</navigator>
 <view class="noteCla3">四、常用标签——导航标签navigator</view>
 <text class="noteCla4" decode='true' user-select="true">
 1、 块级元素 默认会换行  可以直接加宽度和高度 

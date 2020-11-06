@@ -38,17 +38,20 @@ App({
   // 2、 应用 被用户看到 
   onShow(){
     // 对应用的数据或者页面效果 重置 
-    // console.log("onShow");
+    // console.log("应用生命周期onShow");
   },
-  // 3、 应用 被隐藏了 
+  /**
+   * @Description：3、 应用 被隐藏了
+   * @OptSteps：桌面打开 微信Applet开发者工具》菜单栏 点击“切后台”按钮》
+   */
   onHide(){
     // 暂停或者清除定时器 
-    // console.log("Hide");
+    // console.log("应用生命周期Hide");
   },
   // 4、 应用的代码发生了报错的时候 就会触发
   onError(err){
     // 在应用发生代码报错的时候，收集用户的错误信息，通过异步请求 将错误的信息发送后台去
-    // console.log("onError");
+    // console.log("应用生命周期onError");
     // console.log(err);
   },
   // 5、 应用第一次启动的时候，如果找不到应用第一个入口页面（文件app.json中"pages":[第一行路径即应用第一个入口页面]），就会触发事件onPageNotFound()。
@@ -57,7 +60,7 @@ App({
     wx.navigateTo({
       url: '/pages/_05wxssStyle/_05wxssStyle' 
     });  
-    // console.log("onPageNotFound");
+    // console.log("应用生命周期onPageNotFound");
   },
   globalData: {
     userInfo: null
